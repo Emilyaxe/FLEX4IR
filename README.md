@@ -11,7 +11,8 @@ Intermediate representation (IR) based optimizations are fundamental to modern c
 ```
 .
 ├── code
-│   ├── exp_srcipt/    # Running scripts
+│   ├── exp_srcipt/    # Running scripts for MLIR
+│   ├── llvm_exp_srcipt/    # Running scripts for LLVM
 │   └── model/         # Test program generation and execution code (entry point for running the project)
 └── data
     ├── Discussion/
@@ -22,8 +23,12 @@ Intermediate representation (IR) based optimizations are fundamental to modern c
 * **code/**: Contains all code for FLEX4IR.
 
   * **exp\_srcipt/**: Scripts to run and manage MLIR compilation and testing.
+  * **llvm\_exp\_srcipt/**: Scripts to run and manage LLVM compilation and testing.
   * **model/**: Main code for test program generation and running experiments.
-    *To run FLEX, start from this directory.*
+    * Note that the workflow for running LLVM is identical to that for running MLIR; only the original seed file (i.e., mlir_functions.json or all\_ll.json) and the pass configuration file (i.e., opt.new.txt or transform\_passes.txt) need to be modified.*
+
+    * To run FLEX4IR, start from this directory.*
+
 * **data/**: Contains the bug data.
 
   * Each subdirectory (e.g., `Discussion/`, `RQ2/`, `RQ3/`) contains a `bugs.json` file, which is a dictionary mapping each discovered bug to its corresponding triggering stack trace.
@@ -33,7 +38,7 @@ Intermediate representation (IR) based optimizations are fundamental to modern c
 1. **Clone this repository**
 
    ```bash
-   git clone 
+   git clone https://github.com/Emilyaxe/FLEX4IR.git
    cd FLEX4IR
    ```
 
