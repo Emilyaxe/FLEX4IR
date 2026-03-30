@@ -25,7 +25,6 @@ Intermediate representation (IR) based optimizations are fundamental to modern c
   * **exp\_srcipt/**: Scripts to run and manage MLIR compilation and testing.
   * **llvm\_exp\_srcipt/**: Scripts to run and manage LLVM compilation and testing.
   * **model/**: Main code for test program generation and running experiments.
-    * Note that the workflow for running LLVM is identical to that for running MLIR; only the original seed file (i.e., mlir_functions.json or all\_ll.json) and the pass configuration file (i.e., opt.new.txt or transform\_passes.txt) need to be modified.*
 
     * To run FLEX4IR, start from this directory.*
 

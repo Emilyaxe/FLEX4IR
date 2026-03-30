@@ -10,8 +10,8 @@ CANDIDATE_COUNT=25000
 SELECT_RATIO=0.2
 BATCH_SIZE=12
 MODEL_PATH="./codegen-2B"
-#CHECKPOINT_PATH="checkpointSearch4sample/"
-CHECKPOINT_PATH="checkpointSearch/"
+CHECKPOINT_PATH="checkpointSearch4sample/"
+#CHECKPOINT_PATH="checkpointSearch/"
 
 
 CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 accelerate launch --config_file zero2infer.yaml diversity_sampler.py \
